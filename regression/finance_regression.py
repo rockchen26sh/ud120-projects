@@ -41,10 +41,10 @@ from sklearn import linear_model
 
 reg = linear_model.LinearRegression()
 
-reg.fit(features, target)
+reg.fit(feature_train, target_train)
 
-
-
+print (reg.coef_)
+print (reg.intercept_)
 
 
 ### draw the scatterplot, with color-coded training and testing points
@@ -59,6 +59,9 @@ plt.scatter(feature_test[0], target_test[0], color=test_color, label="test")
 plt.scatter(feature_test[0], target_test[0], color=train_color, label="train")
 
 
+print(reg.score(feature_train, target_train))
+
+print(reg.score(feature_test, target_test))
 
 
 ### draw the regression line, once it's coded
