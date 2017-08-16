@@ -35,5 +35,7 @@ pre = clf.predict(features_test)
 
 
 print (accuracy_score(pre, labels_test))
+
+
 #accuracy:0.996587030717
 #########################################################
